@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT-CLOCK</title>
+
+    <style>
+        body {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: gray;
+        }
+
+        .clock {
+
+            display: flex;
+            gap: 10px;
+            background-color: rgba(0, 0, 0, 0.3);
+            width: 400px;
+            height: 200px;
+            align-items: center;
+            justify-content: center;
+            line-height: 2px;
+            border-radius: 5px;
+            box-shadow: 2px 4px 23px -3px rgba(0, 0, 0, 0.75);
+            -webkit-box-shadow: 2px 4px 23px -3px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 2px 4px 23px -3px rgba(0, 0, 0, 0.75);
+
+        }
+
+        .clock p {
+
+            font-size: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="clock">
+
+        <div>
+
+            <p id="hour">00</p>
+            <span>hours</span>
+
+        </div>
+
+        <div>
+
+            <p id="minute">00</p>
+            <span>Minutes</span>
+
+        </div>
+
+        <div>
+
+            <p id="second">00</p>
+            <span>Seconds</span>
+        </div>
+    </div>
+
+    <script>
+
+        let seconds = document.getElementById("second");
+
+         seconds  = 0;
+
+        let interval = setInterval(() => {
+
+           seconds++;
+           seconds.innerHTML = seconds;
+        },1000);
+
+        console.log(interval);
+    </script>
+
+</body>
+
+</html>
