@@ -14,21 +14,28 @@
     <script>
 
 
-function add(num1, num2, call){
+function fetchData(callback) {
+  // Simulating an error
+ 
 
-    
-
-    console.log("The addition of two number is", num1 + num2);
-    call();
-    
+  // Return error if any, otherwise result
+  callback(error, data);
 }
 
-add(22,33,show);
+fetchData((error, data) => {
+  if (error) {
+    console.error("Error:", error);
+  } else {
+    console.log("Data:", data);
+  }
+});
 
-function show(){
 
-    console.log("I am a Legend");
-}
+var data= " info";
+let error = "hello";
+
+
+
     </script>
 </body>
 
